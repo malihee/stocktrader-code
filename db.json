@@ -1,0 +1,76 @@
+{
+  "fund": [
+    {
+      "id": 1,
+      "fund": 7797
+    }
+  ],
+  "stocks": [
+    {
+      "name": "BEMZ",
+      "price": -45,
+      "id": 1
+    },
+    {
+      "name": "BMW",
+      "price": -32,
+      "id": 2
+    },
+    {
+      "name": "TAXI",
+      "price": -43,
+      "id": 3
+    },
+    {
+      "name": "AOD",
+      "price": -43,
+      "id": 4
+    }
+  ],
+  "portfolio": [
+    {
+      "name": "BENZ",
+      "price": -54,
+      "earn_quantity": 10,
+      "sell_quantity": 0,
+      "id": 3
+    },
+    {
+      "name": "BMW",
+      "price": -36,
+      "earn_quantity": 1,
+      "sell_quantity": "",
+      "id": 4
+    },
+    {
+      "name": "taxi",
+      "price": -49,
+      "earn_quantity": 13,
+      "sell_quantity": 0,
+      "id": 5
+    }
+  ],
+  "saved": [
+    {
+      "name": "BENZ",
+      "price": -54,
+      "earn_quantity": 50,
+      "sell_quantity": "",
+      "id": 3
+    },
+    {
+      "name": "BMW",
+      "price": -36,
+      "earn_quantity": 1,
+      "sell_quantity": "",
+      "id": 4
+    },
+    {
+      "name": "taxi",
+      "price": -44,
+      "earn_quantity": 13,
+      "sell_quantity": 0,
+      "id": 5
+    }
+  ]
+}
