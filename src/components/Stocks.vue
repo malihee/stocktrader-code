@@ -7,21 +7,21 @@
 
 <script>
 import Stock from './Stock.vue'
-import {mapActions, mapGetters} from 'vuex'
+import { mapGetters} from 'vuex'
 export default {
   name: 'Stocks',
   components:{
     Stock,
   },
-  created(){
-    this.fetching()
-  },
+  // created(){
+  //   this.fetching()
+  // },
   methods:{
-    ...mapActions('stocks',['fetchdata']),
+    // ...mapActions('stocks',['fetchdata']),
     ...mapGetters('stocks',['all_stocks']),
-    fetching(){
-      this.fetchdata()
-    }
+    // fetching(){
+    //   this.fetchdata()
+    // }
   }
 }
 </script>

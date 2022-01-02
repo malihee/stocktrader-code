@@ -22,23 +22,23 @@ const actions = {
         const max = 10
         const min = -5
         let priceChangeDomain 
-      
+        
         for(let i=0 ; i < state.stocks_arr.length; i++){
             priceChangeDomain = (Math.floor(Math.random()*(max - min))+ min)
             // console.log('stt: ', state.stocks_arr[i]);
-            let content ={
-                name :  state.stocks_arr[i].name,
-                price : state.stocks_arr[i].price + priceChangeDomain,
-                quantity : state.stocks_arr[i].quantity
-            }
-            await fetch(`https://my-json-server.typicode.com/malihee/stock_trader/stocks/${state.stocks_arr[i].id}`,{
-                method:'PUT',
-                headers:{
-                    'Content-type':'application/json'
-                },
-                body:JSON.stringify(content)
-            }
-            )
+            // let content ={
+            //     name :  state.stocks_arr[i].name,
+            //     price : state.stocks_arr[i].price + priceChangeDomain,
+            //     quantity : state.stocks_arr[i].quantity
+            // }
+            // await fetch(`https://my-json-server.typicode.com/malihee/stock_trader/stocks/${state.stocks_arr[i].id}`,{
+            //     method:'PUT',
+            //     headers:{
+            //         'Content-type':'application/json'
+            //     },
+            //     body:JSON.stringify(content)
+            // }
+            // )
             commit('changePrice', {stt: state.stocks_arr[i], how: priceChangeDomain})
             // state.stocks_arr[i].price =+ priceChangeDomain
         }
@@ -53,22 +53,22 @@ const actions = {
             priceChangeDomain = st[0].price - rootState.portfolio.portfolio[i].price
             console.log('pricechange',priceChangeDomain);
             
-            let content= {
-                name:rootState.portfolio.portfolio[i].name,
-                // price: rootState.portfolio.portfolio[i].price + priceChangeDomain,
-                price: st[0].price,
-                earn_quantity: rootState.portfolio.portfolio[i].earn_quantity,
-                sell_quantity : rootState.portfolio.portfolio[i].sell_quantity
-            }
-            await fetch(`https://my-json-server.typicode.com/malihee/stock_trader/portfolio/${rootState.portfolio.portfolio[i].id}`,{
-                method:'PUT',
-                headers:{
-                    'Content-type':'application/json'
-                },
-                body:JSON.stringify(content)
-            }
-            )
-            console.log('sttt: ', rootState.portfolio.portfolio[i]);
+            // let content= {
+            //     name:rootState.portfolio.portfolio[i].name,
+            //     // price: rootState.portfolio.portfolio[i].price + priceChangeDomain,
+            //     price: st[0].price,
+            //     earn_quantity: rootState.portfolio.portfolio[i].earn_quantity,
+            //     sell_quantity : rootState.portfolio.portfolio[i].sell_quantity
+            // }
+            // await fetch(`https://my-json-server.typicode.com/malihee/stock_trader/portfolio/${rootState.portfolio.portfolio[i].id}`,{
+            //     method:'PUT',
+            //     headers:{
+            //         'Content-type':'application/json'
+            //     },
+            //     body:JSON.stringify(content)
+            // }
+            // )
+            // console.log('sttt: ', rootState.portfolio.portfolio[i]);
             commit('changePrice', {stt: rootState.portfolio.portfolio[i], how: priceChangeDomain})
             // rootState.portfolio.portfolio[i].price =+ priceChangeDomain
         } 

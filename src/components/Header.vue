@@ -8,8 +8,8 @@
     <div class="dropdown">
     <h5 class="dropbtn, header-elem "> Save/Load </h5>
     <div class="dropdown-content">
-      <a @click="save"> save data</a>
-      <a  @click="load">load data</a>
+      <button @click="save"> save data</button>
+      <button  @click="load">load data</button>
     </div>
     </div>
     <!-- <h4 class="header-elem" @click="saveAndLoad"> </h4> -->

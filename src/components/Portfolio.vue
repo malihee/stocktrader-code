@@ -29,7 +29,8 @@ export default {
         }
     },
     created:function(){
-       this.fetchPortfolio()
+    //    this.fetchPortfolio()
+        this.portfolioGetter()
     },
 
     computed: {

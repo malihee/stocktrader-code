@@ -8,7 +8,7 @@
 <script>
 
 import Header from './components/Header.vue'
-// import { mapGetters, mapState } from 'vuex'
+import { mapActions } from 'vuex'
 
   export default {
     name: 'App',
@@ -17,9 +17,22 @@ import Header from './components/Header.vue'
         data:[]
       }
     },
+     methods:{
+        ...mapActions('portfolio',['fetchPortfolio']),
+        ...mapActions('stocks',['fetchdata']),
+        // ...mapGetters('stocks',['all_stocks']),
+       
+        // this.portfolioGetter()
+    },
+    created:function(){
+      this.fetchPortfolio()
+      this.fetchdata()
+    },
+
     components: {
       Header
     },
+
     // computed:{
     //   ...mapState(['portfolio']),
     //   ...mapGetters(['getfund'])
